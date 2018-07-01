@@ -1,0 +1,16 @@
+<!--pages/gifmake/gifmake.wxml-->
+<view class='scroll-create'>
+  <view class='gif-show'>
+    <image class='gif-img' src='{{gifImgUrl}}' mode='widthFix'></image>
+  </view>
+  <view class='content-show'>
+    <view class='sens-view' wx:for='{{senslist}}' wx:key='id' wx:item='{{item}}'>
+        <text>第 {{index+1}} 句</text>
+        <input type='text' placeholder='{{item}}' data-i="{{index}}" bindinput='inputChange' placeholder-style='place-show' maxlength='{{maxlength}}'></input>
+    </view>
+  </view>
+</view>
+<view class="create-bottom">
+  <text class='to-home' bindtap='tohome'>回首页</text>
+  <text class='create-gif' hover-class='create-gif-hover' bindtap='watermark'>一键生成</text>
+</view>
